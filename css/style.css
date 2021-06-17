@@ -1,0 +1,397 @@
+* {
+    font-family: "Open Sans", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/*---------------Login---------------*/
+.alert {
+    width: 100%;
+    border-radius: 5px;
+    margin: 5px auto;
+    padding: 20px;
+    background-color: #888;
+    color: white;
+    text-align: center;
+    display: none;
+}
+
+.login {
+    width: 30%;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    margin: 0 auto;
+}
+
+.logo img{
+    width: 100%;
+    height: auto;
+}
+
+.btnIngresar {
+    text-align: center;
+}
+
+.btnIngresar input[type=submit] {
+    width: 80%;
+    font-size: 17px;
+    background-color: #bc0723;
+}
+
+/*---------------Formularios---------------*/
+
+h1 {
+    text-align: center;
+    padding: 10px;
+}
+
+.container {
+    width: 70%;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    margin: 0 auto;
+}
+
+input[type=text], input[type=number], input[type=password], input[type=file], select, textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.input[type=password] {
+    font: small-caption;
+}
+
+input[type=submit], input[type=button] {
+    color: white;
+    padding: 9px 9px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.group {
+    width: 100%;
+    margin: 10px;
+}
+
+.form-row {
+    display: flex;
+}
+
+.validate {
+  color: red;
+}
+
+.textArea {
+    resize: none;
+}
+
+/*---------------Tablas---------------*/
+
+table {
+    width: 80%;
+    background-color: #ffffff;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+thead th {
+    background-color: #bc0723;
+    border: 1px solid #000000;
+    padding: 8px;
+    color: #ffff;
+}
+
+tbody td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+td a {
+    color: #fff;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.bc-cancel {
+    background-color: #6c757d;
+}
+
+.bc-save {
+    background-color: #bc0723;
+}
+.return {
+    margin: auto;
+    width: 80%;
+    padding: 20px 0;
+}
+
+.btnReturn {
+    color: #fff;
+    background-color: #6c757d;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 5px;
+    text-decoration: none;
+}
+
+/*---------------Menu---------------*/
+
+ul {
+    overflow: hidden;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #bc0723;
+}
+
+li {
+    float: left;
+}
+
+.icon {
+    display: none;
+}
+
+.active {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 20px 18px;
+    text-decoration: none;
+}
+
+li a,
+.dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 20px 18px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+li.dropdown {
+    display: inline;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: whitesmoke;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content A:hover {
+    background-color: white;
+}
+
+
+/*pendiente RESPONSIVE*/
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.rightli {
+    float: right;
+}
+
+/*---------------Modal---------------*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+}
+
+.close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 15px 16px;
+    background-color: #bc0723;
+    color: white;
+}
+
+.modal-header h2 {
+    text-align: center;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #bc0723;
+    color: white;
+}
+
+@media screen and (max-width: 600px) {
+    * {
+        box-sizing: border-box;
+    }
+    /*---------------Login---------------*/
+    .alert {
+        font-size: .8em;
+        padding: 10px;
+    }
+
+    .login {
+        width: 70%;
+        border-radius: 10px;
+        padding: 20px;
+        background-color: #f2f2f2;
+        margin: 0 auto;
+    }
+
+    .btnIngresar {
+        text-align: center;
+    }
+
+    /*---------------Formularios---------------*/
+    .input[type=text] {
+        width: 100%;
+        margin-top: 0;
+        font-size: .8em;
+    }
+
+    .form-row {
+        display: block;
+    }
+
+    .group {
+        width: 100%;
+        margin: 0px;
+    }
+
+    .container {
+        width: 90%;
+    }
+    /*---------------Tablas---------------*/
+
+    tbody td {
+        padding: 5px;
+    }
+
+    table {
+        width: 90%;
+        font-size: .8em;
+        display: block;
+        overflow-x: auto;
+    }
+
+    td a {
+        display: inline-block;
+        padding: 2px;
+        margin: 2px;
+    }
+
+    .btnReturn {
+        font-size: .8em;
+    }
+
+    .return {
+        width: 90%;
+    }
+
+    /*---------------menu---------------*/
+    .topNav.responsive {
+        position: relative;
+    }
+
+    .topNav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topNav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: relative;
+    }
+
+    .open {
+        display: block;
+        position: relative;
+    }
+
+    li {
+        float: none;
+    }
+
+    li .icon {
+        display: block;
+        float: right;
+    }
+
+    li a, .dropbtn {
+        display: none;
+    }
+
+    .active {
+        display: block;
+        float: left;
+    }
+}
