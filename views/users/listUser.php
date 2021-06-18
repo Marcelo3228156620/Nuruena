@@ -1,3 +1,7 @@
+<?php
+    require 'views/layout.php';
+    require 'views/index.php';
+?>
 <div>
     <h1>Usuarios</h1>
 </div>
