@@ -67,6 +67,15 @@ input[type=text], input[type=number], input[type=password], input[type=file], se
     box-sizing: border-box;
 }
 
+.ipvalidate-off {
+    display: none;
+}
+
+.ipvalidate-on {
+    display: block;
+    color: red;
+}
+
 .alertMessage-off {
     display: none;
 }

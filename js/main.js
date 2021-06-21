@@ -1,4 +1,12 @@
 
+function menuResponsive() {
+    var x = document.getElementById("nav");
+    if (x.className === "topNav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topNav";
+    }
+}
 
 /*function login() {
     
@@ -101,23 +109,57 @@ window.onload = function () {
     })
 }
 
-//Petición del Area para los cargos
+function validateIP(bool) {
+    if (bool) {
+        $.ajax({
+            type: "POST",
+            url: "?controller=Computer&method=validateIP",
+            data: "ip=" + $('#ip').val(),
+            success: function (data) {
+                if (data == 1) {
+                    document.getElementById('ipValidate').classList.remove('ipvalidate-off');
+                    document.getElementById('ipValidate').classList.add('ipvalidate-on');
+                } else {
+                    document.getElementById('ipValidate').classList.add('ipvalidate-off');
+                    document.getElementById('ipValidate').classList.remove('ipvalidate-on');
+                }
+            },
+            error: function () { }
+        });
+    } else {
+        alert(bool);
+        cadena = "ip=" + $('#ip').val() +
+            "&id=" + $('#id').val();
+        $.ajax({
+            type: "POST",
+            url: "?controller=Computer&method=validateIPExc",
+            data: cadena,
+            success: function (data) {
+                if (data == 1) {
+                    document.getElementById('ipValidate').classList.remove('ipvalidate-off');
+                    document.getElementById('ipValidate').classList.add('ipvalidate-on');
+                } else {
+                    document.getElementById('ipValidate').classList.add('ipvalidate-off');
+                    document.getElementById('ipValidate').classList.remove('ipvalidate-on');
+                }
+            },
+            error: function () { }
+        });
+    }
+}
+//Peticion del Area para los cargos en la vista de editarUsuario
 $(document).ready(function () {
-    $('#areasList').val(1);
-    recargarLista();
-
-    $('#areasList').change(function () {
-        recargarLista();
+    $('#areas').change(function () {
+        recargarListaEdit();
     });
 })
 
-
-//Metodo para cargar los cargos en el select
-function recargarLista() {
+//Metodo para cargar los cargos en el select de editarUsuario
+function recargarListaEdit() {
     $.ajax({
         type: "POST",
         url: "?controller=Charge&method=chargesArea",
-        data: "area=" + $('#areasList').val(),
+        data: "area=" + $('#areas').val(),
         success: function (r) {
             $('#charge_id').html(r);
         }

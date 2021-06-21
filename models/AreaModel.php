@@ -24,4 +24,28 @@ class Area
             die($e->getMessage());
         }
     }
+
+    public function getById($id)
+    {
+        try {
+            $strSql = "SELECT * FROM area WHERE id=:id";
+            $arrayData = ['id' => $id];
+            return $this->pdo->select($strSql, $arrayData);
+        } catch (PDOException $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function getAllExp($id)
+    {
+        try {
+            $strSql = "SELECT *
+              FROM area
+              WHERE id <>:id";
+            $arrayData = ['id' => $id];
+            return $this->pdo->select($strSql, $arrayData);
+        } catch (PDOException $e) {
+            die($e->getMessage());
+        }
+    }
 }

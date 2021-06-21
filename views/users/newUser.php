@@ -36,9 +36,9 @@
                     }
                     ?>
                 </select>
-                <div id="alertMessage" class="alertMessage-off">
+                <!--<div id="alertMessage" class="alertMessage-off">
                     <span>Debe llenar este campo</span>
-                </div>
+                </div> -->
             </div>
             <div class="group">
                 <label for="rol_id">Rol</label>
@@ -71,7 +71,6 @@
                 <select name="charge_id" id="charge_id">
                 </select>
             </div>
-
         </div>
         <div>
             <input type="submit" class="bc-save" value="Guardar" onclick="validateItems()">
@@ -79,3 +78,26 @@
         </div>
     </form>
 </div>
+<script>
+    //Metodo para cargar los cargos en el select de la vista Nuevo usuario
+    function recargarLista() {
+        $.ajax({
+            type: "POST",
+            url: "?controller=Charge&method=chargesArea",
+            data: "area=" + $('#areasList').val(),
+            success: function(r) {
+                $('#charge_id').html(r);
+            }
+        });
+    }
+
+    //Petición del Area para los cargos
+    $(document).ready(function() {
+        $('#areasList').val(1);
+        recargarLista();
+
+        $('#areasList').change(function() {
+            recargarLista();
+        });
+    })
+</script>
