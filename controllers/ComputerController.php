@@ -60,6 +60,7 @@ class computerController
             $ip = $_POST['ip'];
             $id = $_POST['id'];
             $response = $this->computerModel->validateIPExc($ip, $id);
+            print_r($response);
             if (count($response)>0) {
                 echo 1;
             } else {
