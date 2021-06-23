@@ -47,12 +47,12 @@ class Computer
 
     public function validateIPExc($ip, $id)
     {
-        try{
+        try {
             $strSql = "SELECT * FROM equipo WHERE ip = '$ip' AND id != '$id'";
-            return $this->pdo->select ($strSql);
-          }catch(PDOException $e){
+            return $this->pdo->select($strSql);
+        } catch (PDOException $e) {
             die($e->getMessage());
-          }
+        }
     }
 
     //Consultar todos los registros de la tabla computer
@@ -80,6 +80,30 @@ class Computer
             $strSql = "SELECT * FROM equipo WHERE id=:id";
             $arrayData = ['id' => $id];
             return $this->pdo->select($strSql, $arrayData);
+        } catch (PDOException $e) {
+            die($e->getMessage());
+        }
+    }
+
+    //Editar un registro de a DB
+    public function editEquipo($data)
+    {
+        try {
+            $strWhere = 'id = ' . $data['id'];
+            $table = 'equipo';
+            $this->pdo->update($table, $data, $strWhere);
+        } catch (PDOException $e) {
+            die($e->getMessage());
+        }
+    }
+
+    //Eliminar registro de la DB
+    public function deleteEquipo($data)
+    {
+        try {
+            $strWhere = 'id = ' . $data['id'];
+            $table = 'equipo';
+            $this->pdo->delete($table, $strWhere);
         } catch (PDOException $e) {
             die($e->getMessage());
         }

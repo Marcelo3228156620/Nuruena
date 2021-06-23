@@ -39,7 +39,7 @@
             <div class="group">
                 <label for="ip">Dirección IP</label>
                 <input type="text" id="ip" name="ip" value="<?php echo $equipo[0]->ip; ?>" onblur="validateIP(false)">
-                <span id="ipValidate" class="ipvalidate-off">Esta dirección IP ya existe</span>
+                <span id="ipValidateEdit" class="ipvalidate-off">Esta dirección IP ya existe</span>
             </div>
             <div class="group">
                 <label for="ipTel">Dirección IP teléfono</label>

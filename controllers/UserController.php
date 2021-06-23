@@ -52,7 +52,7 @@ class userController
     public function edit()
     {
         try {
-            if(isset($_REQUEST['id'])) {
+            if (isset($_REQUEST['id'])) {
                 $id = $_REQUEST['id'];
                 $users = $this->userModel->getById($id);
                 $sedes = $this->sedeModel->getAll();
@@ -75,6 +75,28 @@ class userController
         }
     }
 
+    public function update()
+    {
+        try {
+            if (isset($_POST)) {
+                unset($_POST['areas']);
+                $this->userModel->editUser($_POST);
+                echo "<script>alert('Usuario actualizado correctamente');
+                    window.location.href = '?controller=user';</script>";
+            } else {
+                echo "Error, accion no permitida";
+            }
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function delete()
+    {
+        $this->userModel->deleteUser($_REQUEST);
+        header('Location: ?controller=user');
+    }
+
     public function listArchive()
     {
         if (isset($_REQUEST['id'])) {
@@ -86,7 +108,7 @@ class userController
 
     public function listArchiveAdmin()
     {
-        if(isset($_REQUEST['id'])) {
+        if (isset($_REQUEST['id'])) {
             $id = $_REQUEST['id'];
             $files = $this->fileModel->getAll($id);
             $areas = $this->areaModel->getAll();

@@ -74,11 +74,11 @@
         <div class="form-row">
             <div class="group">
                 <label for="active">Esta versión tiene licencia?</label>
-                <div>
+                <div class="radio">
                     <input type="radio" name="active" value="✔">
                     <label>Si</label>
                 </div>
-                <div>
+                <div class="radio">
                     <input type="radio" name="active" value="X">
                     <label>No</label>
                 </div>

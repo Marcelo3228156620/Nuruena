@@ -73,4 +73,28 @@ class User
             die($e->getMessage());
         }
     }
+
+    //Actualizar datos del usuario
+    public function editUser($data)
+    {
+        try {
+            $strWhere = 'id = ' . $data['id'];
+            $table = 'users';
+            $this->pdo->update($table, $data, $strWhere);
+        } catch (PDOException $e) {
+            die($e->getMessage());
+        }
+    }
+
+    //Eliminar un usuario
+    public function deleteUser($data)
+    {
+        try {
+            $strWhere = 'id = ' . $data['id'];
+            $table = 'users';
+            $this->pdo->delete($table, $strWhere);
+        } catch (PDOException $e) {
+            die($e->getMessage());
+        }
+    }
 }

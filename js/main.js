@@ -6,48 +6,18 @@ function menuResponsive() {
     } else {
         x.className = "topNav";
     }
-}
+    $(".dropdown .dropbtn").click(function(event) {
 
-/*function login() {
-    
-    var user = document.getElementById('user').value;
-    var password = document.getElementById('password').value;
-    alert(user);
-    $.ajax({
-        type:"POST",
-        url:"?controller=user&method=ctrIngreso",
-        data: {user: user, password: password},
-        success:function(r) {
-            $('#warning').html(r);
-        }
+        var dropdown = $(this).parents(".dropdown");
+        var dropdownContent = $(dropdown).find(".dropdown-content");
+
+        $(".dropdown-content").not($(dropdownContent)).slideUp("slow").addClass("opacity");
+        $(".open").not($(dropdown)).removeClass("open");
+
+        $(dropdown).toggleClass("open");
+        $(dropdownContent).slideToggle("slow").toggleClass("opacity");
     })
-}*/
-
-
-/*const formLogin = document.getElementById('formLogin');
-
-formLogin.addEventListener('submit', (e) => {
-e.preventDefault();
-cadena = "user=" + $('#user').val() +
-        "&password=" + $('#password').val();
-$.ajax({
-    type:"POST",
-    url:"?controller=User&method=ctrIngreso",
-    data: cadena,
-    success:function(r) {
-        if(r==1) {
-            document.getElementById('warning').classList.remove('alert');
-            document.getElementById('warning').classList.add('alertActive');
-        }
-    }
-})
-/*login();*/
-/*document.getElementById('warning').classList.remove('alert');
-document.getElementById('warning').classList.add('alertActive');*/
-
-
-/*})*/
-
+}
 
 //Validación inicio de sesión
 window.onload = function () {
@@ -69,41 +39,11 @@ window.onload = function () {
                     } else {
                         $(location).attr('href', "index.php?controller=user&method=listArchive&id=" + info[0].name);
                     }
-                    //console.log(info[0].name);
-                    //if(info[0].name)
                 } else {
                     document.getElementById('warning').classList.remove('alert');
                     document.getElementById('warning').classList.add('alertActive');
                     document.getElementById('formLogin').reset();
                 }
-                /*if(response == 2) {
-                    var info = JSON.parse(response);
-                    //$(location).attr('href', "?controller=user&method=listArchive&id=");
-                    //console.log(info);
-                    $(location).attr('href', "index.php?controller=user&method=listArchive&id="+info[0].name);
-                    console.log($(location));
-                } else if (response == 3) {
-                    document.getElementById('warning').classList.remove('alert');
-                    document.getElementById('warning').classList.add('alertActive');
-                } else {
-                    console.log(response);
-                    $(location).attr('href', "index.php?controller=User&method=Index");
-                }
-                /*if (r == 1) {
-                    console
-                    window.location = "views/users/listUser.php";
-                }else if (r == 2) {
-                    window.location = 'views/users/listUser.php';
-                }else {
-                    alert("Hola");
-                    document.getElementById('warning').classList.remove('alert');
-                    document.getElementById('warning').classList.add('alertActive');
-                    document.getElementById('user').value = "";
-                    document.getElementById('password').value = "";
-                    document.getElementById('formLogin').reset();
-                }
-                //$(location).attr('href', "index.php?controller=User&method=Index");
-                //console.log(response);*/
             }
         });
     })
@@ -127,7 +67,6 @@ function validateIP(bool) {
             error: function () { }
         });
     } else {
-        alert(bool);
         cadena = "ip=" + $('#ip').val() +
             "&id=" + $('#id').val();
         $.ajax({
@@ -136,17 +75,18 @@ function validateIP(bool) {
             data: cadena,
             success: function (data) {
                 if (data == 1) {
-                    document.getElementById('ipValidate').classList.remove('ipvalidate-off');
-                    document.getElementById('ipValidate').classList.add('ipvalidate-on');
+                    document.getElementById('ipValidateEdit').classList.remove('ipvalidate-off');
+                    document.getElementById('ipValidateEdit').classList.add('ipvalidate-on');
                 } else {
-                    document.getElementById('ipValidate').classList.add('ipvalidate-off');
-                    document.getElementById('ipValidate').classList.remove('ipvalidate-on');
+                    document.getElementById('ipValidateEdit').classList.add('ipvalidate-off');
+                    document.getElementById('ipValidateEdit').classList.remove('ipvalidate-on');
                 }
             },
             error: function () { }
         });
     }
 }
+
 //Peticion del Area para los cargos en la vista de editarUsuario
 $(document).ready(function () {
     $('#areas').change(function () {
@@ -175,12 +115,30 @@ function validateItems() {
         document.getElementById('alertMessage').classList.remove('alertMessage-off');
         document.getElementById('alertMessage').classList.add('alertMessage-on');
     }
-    /*$.ajax({
-        type: "POST",
-        url: "?controller=Computer&method=validateIP",
-        data: "ip=" + $('#ip').val(),
-        success: function (data) {
-            $("#ipValidate").html(data);
+}
+
+//Llamar ventana modal
+window.onload = function () {
+
+    var modal = document.getElementById("wModal");
+    var btn = document.getElementById("btnModal");
+    var span = document.getElementsByClassName("close")[0];
+    btn.onclick = abrirModal;
+    function abrirModal() {
+        var x = document.getElementById("nav");
+        x.className = "topNav";
+        modal.style.display = "block";
+
+
+    }
+
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
         }
-    })*/
+    }
 }

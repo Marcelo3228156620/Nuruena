@@ -316,9 +316,9 @@ li.dropdown {
         box-sizing: border-box;
     }
     /*---------------Login---------------*/
-    .alert {
-        font-size: .8em;
-        padding: 10px;
+
+    .alertActive {
+        padding: 15px;
     }
 
     .login {
@@ -333,11 +333,18 @@ li.dropdown {
         text-align: center;
     }
 
+    .logo {
+        text-align: center;
+    }
+
+    .logo img{
+        width: 70%;
+        margin: 0 auto;
+    }
+
     /*---------------Formularios---------------*/
-    .input[type=text] {
-        width: 100%;
-        margin-top: 0;
-        font-size: .8em;
+    .radio {
+        margin: 5px 0;
     }
 
     .form-row {
@@ -360,7 +367,7 @@ li.dropdown {
 
     table {
         width: 90%;
-        font-size: .8em;
+        /*font-size: .8em;*/
         display: block;
         overflow-x: auto;
     }
@@ -380,6 +387,10 @@ li.dropdown {
     }
 
     /*---------------menu---------------*/
+    .rightli {
+        float: none;
+    }
+
     .topNav.responsive {
         position: relative;
     }
@@ -395,9 +406,19 @@ li.dropdown {
         text-align: left;
     }
 
+    li a, .dropbtn:not(:first-of-type) {
+        padding: 15px 18px;
+        border-bottom: 1px solid white;
+    }
+
     .dropdown-content {
         display: none;
         position: relative;
+    }
+
+    .dropdown-content a {
+        padding: none;
+        border-bottom: 1px solid black;
     }
 
     .open {
@@ -412,6 +433,7 @@ li.dropdown {
     li .icon {
         display: block;
         float: right;
+        padding: 20px 18px;
     }
 
     li a, .dropbtn {

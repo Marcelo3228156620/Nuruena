@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>    
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>    
+    
     <script src="js/main.js"></script>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
     <title></title>
@@ -18,9 +19,8 @@
     ?>
     <nav>
         <ul id="nav" class="topNav">
-            <li><a class="active">Bienvenido</a></li>
-            <!--<li><div class="active"><img src="img/logo_nuruena_min.png" alt="Logo" title="Nurueña"></div></li>-->
-            <li><a href="#" class="icon" onclick="menuResponsive();">M</a></li>
+            <li><a class="active">Bienvenido</a></li>   
+            <li><a href="#" class="icon" onclick="menuResponsive();"><i class="fas fa-bars"></i></a></li>
             <li class="dropdown">
                 <a href="#" class="dropbtn">Sistemas <i class="fas fa-angle-down"></i></a>
                 <ul class="dropdown-content opacity">
@@ -43,22 +43,6 @@
             <li class="rightli"><a href="?controller=User&method=close">Cerrar sesión</a></li>
         </ul>
     </nav>
-    <script>
-        //Abrir y cerrar submenu
-        if (innerWidth <= 600) {
-            $(".dropdown .dropbtn").click(function(event) {
-
-                var dropdown = $(this).parents(".dropdown");
-                var dropdownContent = $(dropdown).find(".dropdown-content");
-
-                $(".dropdown-content").not($(dropdownContent)).slideUp("slow").addClass("opacity");
-                $(".open").not($(dropdown)).removeClass("open");
-
-                $(dropdown).toggleClass("open");
-                $(dropdownContent).slideToggle("slow").toggleClass("opacity");
-            })
-        }
-    </script>
 </body>
 
 </html>

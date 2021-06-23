@@ -42,6 +42,23 @@ class computerController
         }
     }
 
+    public function update()
+    {
+        if (isset($_POST)) {
+            $this->computerModel->editEquipo($_POST);
+            echo "<script>alert('Equipo actualizado correctamente');
+            window.location.href = '?controller=computer';</script>";
+        } else {
+            echo "Error, acciòn no permitida";
+        }
+    }
+
+    public function delete()
+    {
+        $this->computerModel->deleteEquipo($_REQUEST);
+        header('Location: ?controller=computer');
+    }
+
     public function validateIP()
     {
         if (isset($_POST['ip'])) {
@@ -56,17 +73,15 @@ class computerController
 
     public function validateIPExc()
     {
-        if(isset($_POST['id'])) {
+        if (isset($_POST['id'])) {
             $ip = $_POST['ip'];
             $id = $_POST['id'];
             $response = $this->computerModel->validateIPExc($ip, $id);
-            print_r($response);
-            if (count($response)>0) {
+            if (count($response) > 0) {
                 echo 1;
             } else {
             }
-
-        }   
+        }
     }
 
     public function edit()
