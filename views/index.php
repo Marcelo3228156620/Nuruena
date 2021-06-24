@@ -1,3 +1,6 @@
+<?php
+include_once 'models/AreaModel.php';
+?>
 <div id="wModal" class="modal">
     <div class="modal-content">
         <div class="modal-header">
@@ -5,7 +8,7 @@
             <h2>Nuevo archivo</h2>
         </div>
         <div class="modal-body">
-            <form action="" method="POST" enctype="multipart/form-data">
+            <form action="?controller=File&method=save" method="POST" enctype="multipart/form-data">
                 <div class="form-row">
                     <div class="group">
                         <label for="file">Archivo</label>
@@ -18,15 +21,11 @@
                         <select name="area_id" id="area_id">
                             <option>Seleccione...</option>
                             <?php
-                            $ar = $areas;
-                            /*print_r($ar);
-                            die();*/
-                            foreach ($ar as $ares) {
-                                    echo '<option value="' . $ares->id . '">' . $ares->name . '</option>';
-                                }
-                            /*foreach ($areas as $areas) {
-                                echo '<option value="' . $areas->id . '">' . $areas->name . '</option>';
-                            }*/
+                            $areaModel = new Area;
+                            $area = $areaModel->getAll();
+                            foreach ($area as $ares) {
+                                echo '<option value="' . $ares->id . '">' . $ares->name . '</option>';
+                            }
                             ?>
                         </select>
                     </div>

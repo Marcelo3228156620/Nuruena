@@ -18,6 +18,7 @@ class computerController
     public function Index()
     {
         $equipos = $this->computerModel->getAll();
+        require 'views/index.php';
         require 'views/layout.php';
         require 'views/equipo/listEquipo.php';
     }
@@ -26,6 +27,7 @@ class computerController
     {
         $users = $this->userModel->getAll();
         $workstation = $this->wsModel->getAll();
+        require 'views/index.php';
         require 'views/layout.php';
         require 'views/equipo/newEquipo.php';
     }

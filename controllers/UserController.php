@@ -24,6 +24,8 @@ class userController
     public function Index()
     {
         $users =  $this->userModel->getAll();
+        /*require 'views/index.php';
+        require 'views/layout.php';*/
         require 'views/users/listUser.php';
     }
 

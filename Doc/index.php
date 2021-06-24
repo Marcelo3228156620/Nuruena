@@ -1,7 +1,5 @@
 <?php
-	//Abrir la sesion
-	session_start();
-	
+
 	//Llamado a la clase de conexión
 	require 'PDO/Database.php';
 

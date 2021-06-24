@@ -31,7 +31,6 @@ window.onload = function () {
             url: "index.php?controller=User&method=ctrIngreso",
             data: cadena,
             success: function (response) {
-                console.log(response);
                 if (response != 1) {
                     var info = JSON.parse(response);
                     if (info[0].rol_id != 2) {

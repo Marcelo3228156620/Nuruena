@@ -7,16 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>    
-    
     <script src="js/main.js"></script>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
     <title></title>
 </head>
-
 <body>
-    <?php
-    include "index.php";
-    ?>
     <nav>
         <ul id="nav" class="topNav">
             <li><a class="active">Bienvenido</a></li>   
