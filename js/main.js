@@ -107,12 +107,32 @@ function recargarListaEdit() {
 
 //funcion para validar campo vacio
 function validateItems() {
-    var rol_id, sede_id;
+    var rol_id, sede_id, ext;
     rol_id = $("#rol_id").val();
     sede_id = $("#sede_id").val();
-    if (rol_id == "" || sede_id == "") {
+    ext = $("#ext").val();
+    if (ext == "" || ext == null) {
+        document.getElementById('ext').val(1);
+        alert("Hola");
+    } else {
+
+    }
+    if (sede_id == "" || sede_id == null) {
         document.getElementById('alertMessage').classList.remove('alertMessage-off');
         document.getElementById('alertMessage').classList.add('alertMessage-on');
+        return false;
+    } else {
+        document.getElementById('alertMessage').classList.add('alertMessage-off');
+        document.getElementById('alertMessage').classList.remove('alertMessage-on');
+    }
+
+    if (rol_id == "" || rol_id == null) {
+        document.getElementById('alertMessage1').classList.remove('alertMessage-off');
+        document.getElementById('alertMessage1').classList.add('alertMessage-on');
+        return false;
+    } else {
+        document.getElementById('alertMessage1').classList.add('alertMessage-off');
+        document.getElementById('alertMessage1').classList.remove('alertMessage-on');
     }
 }
 

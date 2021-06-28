@@ -36,9 +36,9 @@
                     }
                     ?>
                 </select>
-                <!--<div id="alertMessage" class="alertMessage-off">
+                <div id="alertMessage" class="alertMessage-off">
                     <span>Debe llenar este campo</span>
-                </div> -->
+                </div>
             </div>
             <div class="group">
                 <label for="rol_id">Rol</label>
@@ -50,7 +50,7 @@
                     }
                     ?>
                 </select>
-                <div id="alertMessage" class="alertMessage-off">
+                <div id="alertMessage1" class="alertMessage-off">
                     <span>Debe llenar este campo</span>
                 </div>
             </div>
@@ -73,7 +73,7 @@
             </div>
         </div>
         <div>
-            <input type="submit" class="bc-save" value="Guardar" onclick="validateItems()">
+            <input type="submit" class="bc-save" value="Guardar" onclick="return validateItems()">
             <input type="button" class="bc-cancel" onclick="history.back()" value="Cancelar">
         </div>
     </form>
