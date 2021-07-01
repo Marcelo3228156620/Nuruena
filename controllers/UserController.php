@@ -24,6 +24,7 @@ class userController
     public function Index()
     {
         $users =  $this->userModel->getAll();
+        $sedes = $this->sedeModel->getAll();
         /*require 'views/index.php';
         require 'views/layout.php';*/
         require 'views/users/listUser.php';
@@ -48,6 +49,19 @@ class userController
             }
         } catch (Exception $e) {
             die($e->getMessage());
+        }
+    }
+
+    public function userList()
+    {
+        if(isset($_REQUEST['sede'])) {
+            $sede = $_REQUEST['sede'];
+            /*print($sede);
+            die();*/
+            $users = $this->userModel->getAllExc($sede);
+            /*print_r($users);
+            die();*/
+            echo json_encode($users, JSON_UNESCAPED_UNICODE);
         }
     }
 

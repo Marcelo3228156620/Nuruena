@@ -122,6 +122,13 @@ input[type=submit], input[type=button] {
 }
 
 /*---------------Tablas---------------*/
+.prueba-off {
+    display: none;
+}
+
+.prueba-on {
+    display: block;
+}
 
 table {
     width: 80%;

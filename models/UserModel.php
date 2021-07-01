@@ -74,6 +74,21 @@ class User
         }
     }
 
+    public function getAllExc($sede)
+    {
+        try {
+            /*print($sede);
+            die();*/
+            $strSql = "SELECT * FROM users WHERE sede_id=:sede";
+            $arrayData = ['sede' => $sede];
+            /*print_r($arrayData);
+            die();*/
+            return $this->pdo->select($strSql, $arrayData);
+        } catch (PDOException $e) {
+            die($e->getMessage());
+        }
+    }
+
     //Actualizar datos del usuario
     public function editUser($data)
     {

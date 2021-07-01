@@ -5,19 +5,30 @@
 <div>
     <h1>Usuarios</h1>
 </div>
-<table>
+<div>
+    <select name="sede" id="sede">
+    <option value=""></option>
+    <?php
+        foreach ($sedes as $sedes) {
+            echo '<option value="' . $sedes->id . '">' . $sedes->name . '</option>';
+        }
+    ?>
+    </select>
+</div>
+<!--<div id="pruebita" class="prueba-off">-->
+<table id="myTable">
     <thead>
-        <th>ID</th>
         <th>Nombre</th>
+        <th onclick="sortTable(1)">Sede</th>
         <th>Usuario SAP</th>
         <th>Cargo</th>
         <th>Funciones</th>
     </thead>
-    <tbody>
-        <?php foreach ($users as $users) : ?>
+    <tbody id="Data">
+    <?php foreach ($users as $users) : ?>
             <tr>
-                <td><?php echo $users->id ?></td>
                 <td><?php echo $users->name ?></td>
+                <td><?php echo $users->sede ?></td>
                 <td><?php echo $users->userSap ?></td>
                 <td><?php echo $users->charge ?></td>
                 <td><a href="?controller=User&method=edit&id=<?php echo $users->id; ?>" class="bc-save">Editar</a>
@@ -27,3 +38,4 @@
         <?php endforeach ?>
     </tbody>
 </table>
+<!--</div>-->
