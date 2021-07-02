@@ -56,12 +56,14 @@ class userController
     {
         if(isset($_REQUEST['sede'])) {
             $sede = $_REQUEST['sede'];
-            /*print($sede);
-            die();*/
-            $users = $this->userModel->getAllExc($sede);
-            /*print_r($users);
-            die();*/
-            echo json_encode($users, JSON_UNESCAPED_UNICODE);
+            if($sede == "") {
+                $users =  $this->userModel->getAll();
+                echo json_encode($users, JSON_UNESCAPED_UNICODE);
+            } else {
+                $users = $this->userModel->getAllExc($sede);
+                $sedes = $this->sedeModel->getAll();
+                echo json_encode($users, JSON_UNESCAPED_UNICODE);
+            }
         }
     }
 

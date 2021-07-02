@@ -122,13 +122,6 @@ input[type=submit], input[type=button] {
 }
 
 /*---------------Tablas---------------*/
-.prueba-off {
-    display: none;
-}
-
-.prueba-on {
-    display: block;
-}
 
 table {
     width: 80%;
@@ -177,6 +170,15 @@ td a {
     margin: auto;
     width: 80%;
     padding: 20px 0;
+}
+
+.selectSede {
+    width: 20%;
+    margin: auto;
+}
+
+.slctSede {
+    padding: 2%;
 }
 
 .btnReturn {
@@ -391,6 +393,10 @@ li.dropdown {
 
     .return {
         width: 90%;
+    }
+
+    .selectSede {
+        width: 80%;
     }
 
     /*---------------menu---------------*/

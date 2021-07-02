@@ -77,12 +77,15 @@ class User
     public function getAllExc($sede)
     {
         try {
-            /*print($sede);
-            die();*/
-            $strSql = "SELECT * FROM users WHERE sede_id=:sede";
+            $strSql = "SELECT u.*,
+            s.name as sede,
+            c.name as charge
+            FROM users u
+            INNER JOIN sede s
+            ON s.id = u.sede_id
+            INNER JOIN charge c
+            ON c.id = u.charge_id WHERE sede_id=:sede";
             $arrayData = ['sede' => $sede];
-            /*print_r($arrayData);
-            die();*/
             return $this->pdo->select($strSql, $arrayData);
         } catch (PDOException $e) {
             die($e->getMessage());

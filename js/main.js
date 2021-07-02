@@ -119,30 +119,20 @@ function recargarListaSede() {
         url: "?controller=user&method=userList",
         data: "sede=" + $('#sede').val(),
         success: function (r) {
-            alert(r);
+            var info = JSON.parse(r);
             var html = '';
             var i;
-            for (i = 0; i < r.length; i++) {
+            for (i = 0; i < info.length; i++) {
                 html += '<tr>' +
-                '<td>' + r[i].calldate + '</td>' +
-                '<td>' + r[i].clid + '</td>' +
-                '<td>' + r[i].src + '</td>' +
-                '<td>' + r[i].dst + '</td>' +
-                '<td>' + r[i].dcontext + '</td>' +
-                '<td>' + r[i].channel + '</td>' +
-                '<td>' + r[i].dstchannel + '</td>' +
-                '<td>' + r[i].lastapp + '</td>' +
+                '<td>' + info[i].name + '</td>' +
+                '<td>' + info[i].sede + '</td>' +
+                '<td>' + info[i].userSap + '</td>' +
+                '<td>' + info[i].charge + '</td>' +
+                '<td>' + '<a href="?controller=User&method=edit&id=' + info[i].id + '" class="bc-save">Editar</a>' +
+                        '<a href= "?controller=User&method=delete&id='+ info[i].id + '" class="bc-cancel" onclick="return confirm("Esta seguro de eliminar?")">Eliminar</a>' +
                 '</tr>';  
             }
-            $('#DataResult').html(html);
-            /*if(users == 1) {
-                document.getElementById('pruebita').classList.add('prueba-on');
-                document.getElementById('pruebita').classList.remove('prueba-off');
-            } else {
-                document.getElementById('pruebita').classList.add('prueba-off');
-                document.getElementById('pruebita').classList.remove('prueba-on');
-                alert ("HOLA");
-            }*/
+            $('#Data').html(html);
         }
     })
 }
@@ -203,42 +193,3 @@ window.onload = function () {
         }
     }
 }
-
-function sortTable(n)
-{
-    var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-    table = document.getElementById("myTable");
-    switching = true;
-    dir = "asc";
-    while (switching) {
-        switching = false;
-        rows = table.rows;
-        for (i = 1; i < (rows.length - 1); i++) {
-            shouldSwitch = false;
-            x = rows[i].getElementsByTagName("TD")[n];
-            y = rows[i + 1].getElementsByTagName("TD")[n];
-            if (dir == "asc") {
-                if(x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-                    shouldSwitch = true;
-                    break;
-                }
-            } else if (dir == "desc") {
-                if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-                    shouldSwitch = true;
-                    break;
-                }
-            }
-        }
-        if (shouldSwitch) {
-            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-            switching = true;
-            switchcount ++;
-        } else {
-            if (switchcount == 0 && dir == "asc") {
-                dir = "desc";
-                switching = true;
-            }
-        }
-    }
-}
-

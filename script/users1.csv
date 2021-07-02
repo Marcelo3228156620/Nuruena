@@ -1,0 +1,52 @@
+id;name;userSap;user;password;ext;job;area
+1;"Juan Manuel Marcelo";pas.sis;sistemas;Reinoso01;0;Pasante;Sistemas
+2;"Jairo Parra";;;;1070;"Coordinador documental ";Documentación
+3;"Jairo Parra";;;;1070;"Coordinador documental ";Documentación
+4;"Adriana Rodriguez";Asisconta_7;;;1024;"Asistente archivo";"Contabilidad "
+5;"Yeny Roncancio ";Jefe.con2;;;1050;"Jefe contabilidad ";Contabilidad
+6;"Jasson Rodríguez ";Cor.com;;;1053;"Coordinador JR";Contabilidad
+7;"Angela Amaya";Así.com4;;;1052;"Asistente JR";Contabilidad
+8;"Sin usuario";;;;1051;;"Contabilidad "
+9;"Mónica Reyes Lopez";Asi.tes3;;;1031;"Asistente senior tesorería ";"Tesorería Nomina Administración "
+10;"Diana Marcela Gualdrón Ardila";Así.car2;;;1073;"Asistente de crédito y cartera ";Cartera
+11;"Beiba Moreno";Asis.car4;;;1072;"Asistente cartera";"Crédito y cartera "
+12;Mercadeo;;;;0;"Mercadeo ";"Mercadeo "
+13;"Carolina García ";ase.tel1;;;1301;"Servicio al cliente ";Comercial
+14;"Carolina García ";ase.tel1;;;1301;"Servicio al cliente ";Comercial
+15;"William Cuervo ";Super.dis;;;0;"Supervisor de ventas ";"Mercadeo "
+16;"William Cuervo ";Super.dis;;;0;"Supervisor de ventas ";"Mercadeo "
+17;"William Andrés Sánchez ";Así.tes2;;;1033;"Tesorería SR";Tesorería
+18;"José Guzmán ";"Remoto ";;;1080;"Asistente JR";Administración
+19;"Sin usuario";;;;1080;;Administración
+20;"Yenny Paola Urrego";Cor.tes1;;;1030;"Coordinadora de tesorería ";Tesorería
+21;"Nelson Linares";"No tiene SAP";;;1302;Asesor;Lorenzetti
+22;"William Fernando Beltrán ";ase.mos1;;;1010;"Asesor comercial ";Ventas
+23;"Yamit Arbey Piza Raba";asi.log1;;;1040;"Almacenista JR";"Logística "
+24;"Carlos Alberto García ";ase.mos3;;;1011;"Asesor mostrador ";Mostrador
+25;"Carlos Alberto García ";ase.mos3;;;1011;"Asesor mostrador ";Mostrador
+26;"Impresora ";;;;0;;"2do piso"
+27;"Impresora ";;;;0;;"2do piso cartera "
+28;"Impresora ";;;;0;;"2do piso cartera "
+29;"Impresora ";;;;0;;"1er piso mostrador"
+30;"Impresora ";;;;0;;"1er piso Tesoreria"
+31;"Wilmer Acevedo ";ase.mos2;;;1012;"Asesor mostrador ";Mostrador
+32;"Impresora ";;;;0;;"1er piso Logística "
+33;"Base de datos ";;;;0;;Sistemas
+34;"Base de datos ";;;;0;;"Sistemas "
+35;"Impresora ";;;;123;;"1er piso comercial"
+36;"Diana Ortiz";ase.mos4;Mostrador;;1012;Asesor;Ventas
+37;"Angelica Ortiz";srv.cli;Comercial;;1021;Asistente;Ventas
+38;"Nancy Buitrago";así.cmr4;;;0;"Asistente comercial";Comercial
+39;"Camilo Andrés Ayazo Durango";cor.log3;;;1141;"Coordinador logístico";"Operaciones "
+40;"Yeny Lorena Mariño Rojas";"No tiene";;;1180;"Coordinador Admin y RH ";"Administración RH "
+41;"Daniela Marin";"No tiene ";;;1281;"Asistente  administrativo";Administración
+42;"Fernanda Lozano ";así.com1;;;1260;"Asistente de compras";Compras
+43;"Oscar Eduardo Arrigui Usma";"No tiene";;;1243;"Asistente SR SST";Administración
+44;"Paola Muñoz ";así.com2;;;1160;"Asistente compras ";Compras
+45;"María Cristina Guerrero chamorro";coor.lo1;;;1141;"Coordinador logística";Logistica
+46;"Harold Lagos ";Ana.inv;;;1244;"Analista logística ";Logística
+47;"Camilo Alejandro Bustamante ";coor.pro;;;0;"Coordinador de procesos ";Logística
+48;"Impresora ";;;;0;"Logística ";"Logística 1er piso"
+49;"Viviana Monrroy";así.log4;;;0;"Asistente facturación ";"Servicio al cliente-Facturación"
+50;"Impresora ";"Impresora ";;;0;"Impresora ";"2do piso admin Mosquera"
+51;"Impresora ";"Impresora ";;;0;"Impresora ";"2do piso admin Mosquera"

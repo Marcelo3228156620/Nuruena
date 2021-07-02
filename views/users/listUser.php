@@ -5,9 +5,9 @@
 <div>
     <h1>Usuarios</h1>
 </div>
-<div>
-    <select name="sede" id="sede">
-    <option value=""></option>
+<div class="selectSede">
+    <select name="sede" id="sede" class="slctSede">
+    <option value="">Todos</option>
     <?php
         foreach ($sedes as $sedes) {
             echo '<option value="' . $sedes->id . '">' . $sedes->name . '</option>';
@@ -15,11 +15,10 @@
     ?>
     </select>
 </div>
-<!--<div id="pruebita" class="prueba-off">-->
 <table id="myTable">
     <thead>
         <th>Nombre</th>
-        <th onclick="sortTable(1)">Sede</th>
+        <th>Sede</th>
         <th>Usuario SAP</th>
         <th>Cargo</th>
         <th>Funciones</th>
@@ -38,4 +37,3 @@
         <?php endforeach ?>
     </tbody>
 </table>
-<!--</div>-->

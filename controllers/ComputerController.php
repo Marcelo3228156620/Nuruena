@@ -18,6 +18,8 @@ class computerController
     public function Index()
     {
         $equipos = $this->computerModel->getAll();
+        /*print_r($equipos);
+        die();*/
         require 'views/index.php';
         require 'views/layout.php';
         require 'views/equipo/listEquipo.php';
