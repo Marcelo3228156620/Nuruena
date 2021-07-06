@@ -15,6 +15,15 @@ class Area
         }
     }
 
+    public function newArea($data)
+    {
+        try {
+            $this->pdo->insert("area", $data);
+        } catch (PDOException $e) {
+            die($e->getMessage());  
+        }
+    }
+
     public function getAll()
     {
         try {

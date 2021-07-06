@@ -35,3 +35,24 @@ include_once 'models/AreaModel.php';
         </div>
     </div>
 </div>
+
+<!-- Nueva Area -->
+<div id="wModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Nueva area</h2>
+        </div>
+        <div class="modal-body">
+            <form action="?controller=Area&method=save" method="POST">
+                <div class="form-row">
+                    <div class="group">
+                        <label for="name"></label>
+                        <input type="text" >
+                    </div>
+                </div>
+                <input type="submit" class="bc-save" value="Guardar">
+            </form>
+        </div>
+    </div>
+</div>
