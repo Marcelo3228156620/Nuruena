@@ -1,0 +1,69 @@
+id,serial,computer,provider,model,ip,ipTel,workstation,win_Version,active,note,user_id
+1,,portatil,Lenovo,,102,72,Usuario,Windows_10_x64,X,"Conexión por cable, IP automática ",1
+2,MXJ91501PW,escritorio,HP,"HP Compaq dc5800",81,49,Usuario,Windows_7_x32,X,"IP fija",3
+3,MXL04825D3,escritorio,HP,"HP 500B Microtower",48,57,Usuario,Windows_7_x64,✔,,4
+4,PF10BUH8,portatil,Lenovo,20H1003DCL,72,1,Usuario,Windows_10_x64,✔,"Asignado mouse y teclado, IP automática  
+",5
+5,PF0M2WF9,portatil,Lenovo,80EC,10,42,Usuario,Windows_10_x64,✔,"Conectado por wifi, mouse y teclado IP automática 
+",6
+6,7H8ZHX1,escritorio,Dell,"Dell Optiplex 3010",68,43,Usuario,Windows_7_x64,✔,"IP fija, conexión por cable 
+",7
+7,95N15V1,escritorio,Dell,"Optiplex 790",90,1,Usuario,Windows_7_x64,✔,"IP automática",8
+8,MXX01615B2,escritorio,Compaq,"AY562AA-ABM CQ5314LA",20,1,Usuario,Windows_7_x64,✔,"IP fija, conexión por cable
+",9
+9,MXL0331RP7,escritorio,Compaq,"HP Compaq 8000 elite SFF",19,1,Usuario,Windows_7_x64,✔,"Cambio de licencia IP fija conexión por cable 
+",10
+10,MXJ91501QS,escritorio,HP,"HP Compaq dc5800",15,50,Usuario,Windows_7_x64,✔,"IP fija, conexión por cable
+",11
+11,2UA4071727,escritorio,HP,HP,38,1,Usuario,Windows_10_x64,✔,"El equipo no tiene permisos de nada, conectado por cable 
+",12
+12,DS1NP22,escritorio,Dell,"Optiplex 7010",21,31,Usuario,Windows_7_x64,✔,"IP fija, conexión por cable 
+",14
+13,5CD5062XKH,portatil,HP,"HP envy 15 Notebook ",92,1,Usuario,Windows_10_x64,✔,"IP automática, conexión por cable 
+",16
+14,D3GQCX1,escritorio,Dell,"Optiplex 7010",17,54,Usuario,Windows_7_x64,✔,"IP fija, conexión por cable 
+",17
+15,MXL1190FMK,escritorio,HP,"HP 500B Microtower",111,1,Usuario,Windows_7_x32,✔,"El usuario se conecta por remoto el equipo no tiene SAP, IP automática, conexión por cable 
+",18
+16,7GTZHX1,escritorio,Dell,"Optiplex 3010",70,1,Usuario,Windows_7_x64,✔,"IP automática conexión por cable 
+",19
+17,3HF4YV1,escritorio,Dell,"Optiplex 7010",45,1,Usuario,Windows_7_x64,✔,"IP automática, conexión por cable 
+",20
+18,MXL1190FL6,escritorio,HP,"HP 500B Microtower",47,1,Usuario,Windows_7_x64,✔,"IP automática conexión por cable 
+",21
+19,MXL1190FKM,escritorio,HP,"HP 500B Microtower",74,1,Usuario,Windows_7_x32,✔,"IP automática, conexión por cable 
+",22
+20,MXL1190FMM,escritorio,HP,"HP 500B Microtower",99,1,Usuario,Windows_7_x64,✔,"IP automática, conexión por cable 
+",23
+21,MXL04825CN,escritorio,HP,"HP 500B Microtower",67,1,Usuario,Windows_7_x64,✔,"IP automática, conexión por cable 
+",25
+22,,Seleccione...,Toshiba,"Toshiba studio3540c",26,1,Impresora,Seleccione...,X,"IP estática 
+",26
+23,,Seleccione...,Toshiba,"Toshiba studio3055c",25,1,Impresora,Seleccione...,X,"IP estática 
+",28
+24,,Seleccione...,"Toshiba ","Toshiba studio 2330c",27,1,Impresora,Seleccione...,X,"IP estática
+",29
+25,,Seleccione...,"Toshiba ","Toshiba studio2540c",29,1,Impresora,Seleccione...,X,"IP estática
+",30
+26,MXL1190FQ6,escritorio,HP,SLIC-CPC,96,1,Usuario,Windows_7_x64,✔,"IP automática, conexión por cable
+",31
+27,,Seleccione...,Toshiba,"Toshiba studio3540c",28,1,Impresora,Seleccione...,X,"IP estática
+",32
+28,,Seleccione...,,,4,1,"Base de datos ",Seleccione...,X,,33
+29,,Seleccione...,,,7,1,"Base de datos ",Seleccione...,X,,34
+30,,Seleccione...,"Toshiba ","Toshiba studio 2050c",24,1,Impresora,Seleccione...,X,,35
+31,21,escritorio,HP,1,76,40,Usuario,Windows_10_x64,✔,,36
+32,12,escritorio,Dell,1,53,121,Usuario,Windows_7_x64,X,,37
+33,MXL04825L6,escritorio,HP,"HP 500B Microtower",168,174,Usuario,Windows_7_x32,✔,"IP fija 2GB RAM, extensión dañada, equipo lento ",38
+34,PF0IQZG7,portatil,"Lenovo ",80EC,128,1141,Usuario,Windows_10_x64,✔,"IP Automática, 6GB RAM 4 utilizadas,Revisar cable ethernet ",39
+35,5CG1123YPC,portatil,HP,"HP 240 G7",179,156,Usuario,Windows_10_x64,✔,"IP fija ",40
+36,MXL0331RPX,escritorio,HP,"HP Compaq 8000 elite SFF",163,158,Usuario,Windows_7_x32,X,"IP fija, 6GB RAM ",41
+37,MXL40307W5,escritorio,HP,SLIC-CPC,173,152,Usuario,Windows_7_x64,X,"IP fija, se cierra el excel 4GB RAM ",42
+38,PF0M2WF9,portatil,"Lenovo ",80EC,0,188,Usuario,Windows_10_x64,✔,"IP automática, puerto dañado, teléfono a veces falla salen líneas en la pantalla, equipo falla completamente ",43
+39,MXL1412H12,escritorio,HP,"HP Compaq 6200 Pro SFF",175,147,Usuario,Windows_7_x64,X,"IP fija, 8GB RAM, Core i5 2400",44
+40,3HF4YV1,Seleccione...,Dell,"Optiplex 7010",180,151,Usuario,Seleccione...,X,"Conexión por cable ",45
+41,2CE3013TB9,portatil,HP,"HP ProBook 4540s",138,0,Usuario,Windows_10_x64,✔,"IP fija, el teléfono sale asignado a yamit reyes ",46
+42,PF10BUH8,portatil,"Lenovo ",20H1003DCL,107,0,Usuario,Windows_10_x64,✔,"Teléfono no está funcionando falta cable de red y de poder, falta cable de red en el equipo ",47
+43,,Seleccione...,Toshiba,"Toshiba studio3540c",146,0,Impresora,Seleccione...,X,"La impresora no funciona correctamente ",48
+44,MXX0400NX8,escritorio,Compaq,CQ5606LA,139,144,Usuario,Windows_7_x64,✔,"IP fija, Equipo presenta lentitud ",49
+45,,Seleccione...,Toshiba,"Toshiba studio3540c",149,0,Impresora,Seleccione...,X,,51
