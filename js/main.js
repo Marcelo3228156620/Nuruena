@@ -170,26 +170,38 @@ function validateItems() {
 
 //Llamar ventana modal
 window.onload = function () {
-
-    var modal = document.getElementById("wModal");
-    var btn = document.getElementById("btnModal");
+    var fileModal = document.getElementById("fileModal");
+    var areaModal = document.getElementById("areaModal");
+    var btnFile = document.getElementById("btnFile");
+    var btnArea = document.getElementById("btnArea");
     var span = document.getElementsByClassName("close")[0];
-    btn.onclick = abrirModal;
-    function abrirModal() {
+    var span2 = document.getElementsByClassName("close")[1];
+    btnFile.onclick = abrirModalFile;
+    btnArea.onclick = abrirModalArea;
+    function abrirModalFile() {
         var x = document.getElementById("nav");
         x.className = "topNav";
-        modal.style.display = "block";
+        fileModal.style.display = "block";
+    }
 
-
+    function abrirModalArea() {
+        var x = document.getElementById("nav");
+        x.className = "topNav";
+        areaModal.style.display = "block";
     }
 
     span.onclick = function () {
-        modal.style.display = "none";
+        fileModal.style.display = "none";
+    }
+
+    span2.onclick = function () {
+        areaModal.style.display = "none";
     }
 
     window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
+        if (event.target == fileModal || event.target == areaModal) {
+            fileModal.style.display = "none";
+            areaModal.style.display = "none";
         }
     }
 }

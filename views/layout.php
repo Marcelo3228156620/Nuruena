@@ -23,7 +23,8 @@
                     <a href="?controller=Computer&method=newEquipo">Nuevo equipo</a>
                     <a href="?controller=User&method=Index">Lista usuarios</a>
                     <a href="?controller=Computer">Lista equipos</a>
-                    <a href="#" id="btnModal">Nuevo archivo</a>
+                    <a href="#" id="btnFile">Nuevo archivo</a>
+                    <a href="#" id="btnArea">Nueva area</a>
                 </ul>
             </li>
             <li><a href="?controller=User&method=listArchiveAdmin&id=Cartera">Cartera</a></li>

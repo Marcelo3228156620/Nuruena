@@ -1,7 +1,7 @@
 <?php
 include_once 'models/AreaModel.php';
 ?>
-<div id="wModal" class="modal">
+<div id="fileModal" class="modal">
     <div class="modal-content">
         <div class="modal-header">
             <span class="close">&times;</span>
@@ -37,7 +37,7 @@ include_once 'models/AreaModel.php';
 </div>
 
 <!-- Nueva Area -->
-<div id="wModal" class="modal">
+<div id="areaModal" class="modal">
     <div class="modal-content">
         <div class="modal-header">
             <span class="close">&times;</span>
@@ -47,8 +47,8 @@ include_once 'models/AreaModel.php';
             <form action="?controller=Area&method=save" method="POST">
                 <div class="form-row">
                     <div class="group">
-                        <label for="name"></label>
-                        <input type="text" >
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name">
                     </div>
                 </div>
                 <input type="submit" class="bc-save" value="Guardar">
