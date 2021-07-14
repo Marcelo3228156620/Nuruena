@@ -16,6 +16,15 @@ class Charge
         }
     }
 
+    public function newCharge($data)
+    {
+        try {
+            $this->pdo->insert("charge", $data);
+        } catch (PDOException $e) {
+            die($e->getMessage());
+        }
+    }
+
     public function chargesList($id)
     {
         try {

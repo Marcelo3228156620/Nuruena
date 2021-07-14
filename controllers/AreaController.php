@@ -16,6 +16,7 @@ class areaController
         try {
             if (isset($_POST['name'])) {
                 $this->areaModel->newArea($_POST);
+                header("Location: " . $_SERVER["HTTP_REFERER"]);
             }
         } catch (Exception $e) {
             die($e->getMessage());

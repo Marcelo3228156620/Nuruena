@@ -9,6 +9,18 @@ class chargeController
         $this->chargeModel = new Charge;
     }
 
+    public function save()
+    {
+        try {
+            if (isset($_POST['name'])) {
+                $this->chargeModel->newCharge($_POST);
+                header("Location: " . $_SERVER["HTTP_REFERER"]);
+            }
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
     public function chargesArea()
     {
         if (isset($_POST['area'])) {

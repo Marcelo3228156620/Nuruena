@@ -1,6 +1,7 @@
 <?php
 include_once 'models/AreaModel.php';
 ?>
+
 <div id="fileModal" class="modal">
     <div class="modal-content">
         <div class="modal-header">
@@ -49,6 +50,42 @@ include_once 'models/AreaModel.php';
                     <div class="group">
                         <label for="name">Nombre:</label>
                         <input type="text" id="name" name="name">
+                    </div>
+                </div>
+                <input type="submit" class="bc-save" value="Guardar">
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Nuevo Cargo-->
+<div id="cargoModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Nuevo cargo</h2>
+        </div>
+        <div class="modal-body">
+            <form action="?controller=Charge&method=save" method="POST">
+                <div class="form-row">
+                    <div class="group">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="group">
+                        <label for="area_id">Area:</label>
+                        <select name="area_id" id="area_id">
+                            <option>Seleccione...</option>
+                            <?php
+                            $areaModel = new Area;
+                            $area = $areaModel->getAll();
+                            foreach ($area as $ares) {
+                                echo '<option value="' . $ares->id . '">' . $ares->name . '</option>';
+                            }
+                            ?>
+                        </select>
                     </div>
                 </div>
                 <input type="submit" class="bc-save" value="Guardar">

@@ -170,14 +170,26 @@ function validateItems() {
 
 //Llamar ventana modal
 window.onload = function () {
+    //Ventanas modales
     var fileModal = document.getElementById("fileModal");
     var areaModal = document.getElementById("areaModal");
+    var cargoModal = document.getElementById("cargoModal");
+
+    //Botones Ventanas modales
     var btnFile = document.getElementById("btnFile");
     var btnArea = document.getElementById("btnArea");
+    var btnCargo = document.getElementById("btnCargo");
+
+    //Botones Salir ventanas modales
     var span = document.getElementsByClassName("close")[0];
     var span2 = document.getElementsByClassName("close")[1];
+    var span3 = document.getElementsByClassName("close")[2];
+
+    //Metodos AbrirModales
     btnFile.onclick = abrirModalFile;
     btnArea.onclick = abrirModalArea;
+    btnCargo.onclick = abrirModalCargo;
+
     function abrirModalFile() {
         var x = document.getElementById("nav");
         x.className = "topNav";
@@ -190,6 +202,12 @@ window.onload = function () {
         areaModal.style.display = "block";
     }
 
+    function abrirModalCargo() {
+        var x = document.getElementById("nav");
+        x.className = "topNav";
+        cargoModal.style.display = "block";
+    }
+
     span.onclick = function () {
         fileModal.style.display = "none";
     }
@@ -197,11 +215,15 @@ window.onload = function () {
     span2.onclick = function () {
         areaModal.style.display = "none";
     }
+    span3.onclick = function () {
+        cargoModal.style.display = "none";
+    }
 
     window.onclick = function (event) {
-        if (event.target == fileModal || event.target == areaModal) {
+        if (event.target == fileModal || event.target == areaModal || event.target == cargoModal) {
             fileModal.style.display = "none";
             areaModal.style.display = "none";
+            cargoModal.style.display = "none";
         }
     }
 }

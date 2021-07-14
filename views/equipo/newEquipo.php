@@ -9,6 +9,7 @@
                     <option value="portatil">Portatil</option>
                     <option value="escritorio">Escritorio</option>
                     <option value="todo_en_uno">Todo en uno</option>
+                    <option value="impresora">Impresora</option>
                 </select>
             </div>
             <div class="group">

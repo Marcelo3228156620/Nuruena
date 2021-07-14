@@ -10,7 +10,7 @@
                 <select name="computer" id="computer">
                     <option value="<?php echo $equipo[0]->computer; ?>" selected><?php echo $equipo[0]->computer; ?></option>
                     <?php
-                    $equipos = array("portatil", "escritorio", "todo_en_uno");
+                    $equipos = array("portatil", "escritorio", "todo_en_uno", "impresora");
 
                     for ($i = 0; $i < 3; $i++) {
                         if ($equipos[$i] != $equipo[0]->computer) {

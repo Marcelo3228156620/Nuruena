@@ -25,6 +25,7 @@
                     <a href="?controller=Computer">Lista equipos</a>
                     <a href="#" id="btnFile">Nuevo archivo</a>
                     <a href="#" id="btnArea">Nueva area</a>
+                    <a href="#" id="btnCargo">Nuevo cargo</a>
                 </ul>
             </li>
             <li><a href="?controller=User&method=listArchiveAdmin&id=Cartera">Cartera</a></li>
