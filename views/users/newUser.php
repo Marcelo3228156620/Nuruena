@@ -14,7 +14,8 @@
         <div class="form-row">
             <div class="group">
                 <label for="user">Usuario</label>
-                <input type="text" name="user" id="user" class="input-form" placeholder="Ingrese el usuario">
+                <input type="text" name="user" id="user" class="input-form" placeholder="Ingrese el usuario" onblur="validateUser(true)">
+                <span id="userValidate" class="ipvalidate-off">Este nombre de usuario ya existe</span>
             </div>
             <div class="group">
                 <label for="password">Contraseña</label>

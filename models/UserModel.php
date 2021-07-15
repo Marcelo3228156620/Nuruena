@@ -63,6 +63,15 @@ class User
         }
     }
 
+    public function validateUser($user)
+    {
+        try {
+            $strSql = "SELECT * FROM user WHERE "
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
+    }
+
     public function getById($id)
     {
         try {

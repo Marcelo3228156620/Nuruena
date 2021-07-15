@@ -67,6 +67,15 @@ class userController
         }
     }
 
+    public function validateUser()
+    {
+        if(isset($_POST['user'])) {
+            $user = $_POST['user'];
+            $validate = $this->userModel->validateUser($user);
+            
+        }
+    }
+
     public function edit()
     {
         try {

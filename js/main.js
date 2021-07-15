@@ -86,6 +86,25 @@ function validateIP(bool) {
     }
 }
 
+function validateUser(bool) {
+    if (bool) {
+        $.ajax({
+            type: "POST",
+            url: "?controller=User&method=validateUser",
+            data: "user=" + $('#user').val(),
+            success: function (data) {
+                if (data == 1) {
+                    document.getElementById('userValidate').classList.remove('ipvalidate-off');
+                    document.getElementById('userValidate').classList.add('ipvalidate-on');
+                } else {
+                    document.getElementById('userValidate').classList.add('ipvalidate-off');
+                    document.getElementById('userValidate').classList.remove('ipvalidate-on');
+                }
+            }
+        })
+    }
+}
+
 //Peticion del Area para los cargos en la vista de editarUsuario
 $(document).ready(function () {
     $('#areas').change(function () {
