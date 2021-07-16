@@ -100,7 +100,26 @@ function validateUser(bool) {
                     document.getElementById('userValidate').classList.add('ipvalidate-off');
                     document.getElementById('userValidate').classList.remove('ipvalidate-on');
                 }
-            }
+            },
+            error: function () { }
+        });
+    } else {
+        cadena = "user=" + $('#user').val() +
+            "&id=" + $('#id').val();
+        $.ajax({
+            type: "POST",
+            url: "?controller=User&method=validateUserExc",
+            data: cadena,
+            success: function (data) {
+                if(data == 1) {
+                    document.getElementById('userValidateEdit').classList.remove('ipvalidate-off');
+                    document.getElementById('userValidateEdit').classList.add('ipvalidate-on');
+                } else {
+                    document.getElementById('userValidateEdit').classList.add('ipvalidate-off');
+                    document.getElementById('userValidateEdit').classList.remove('ipvalidate-on');
+                }
+            },
+            error: function () { }
         })
     }
 }

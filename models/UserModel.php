@@ -66,9 +66,21 @@ class User
     public function validateUser($user)
     {
         try {
-            $strSql = "SELECT * FROM user WHERE "
-        } catch (\Throwable $th) {
-            //throw $th;
+
+            $strSql = "SELECT * FROM users WHERE user='$user'";
+            return $this->pdo->select($strSql);
+        } catch (PDOException $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function validateUserExc($user, $id)
+    {
+        try {
+            $strSql = "SELECT * FROM users WHERE user = '$user' AND id != '$id'";
+            return $this->pdo->select($strSql);
+        } catch (PDOException $e) {
+            die($e->getMessage());
         }
     }
 

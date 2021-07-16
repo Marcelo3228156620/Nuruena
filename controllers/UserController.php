@@ -72,7 +72,23 @@ class userController
         if(isset($_POST['user'])) {
             $user = $_POST['user'];
             $validate = $this->userModel->validateUser($user);
-            
+            if (count($validate) > 0) {
+                echo 1;
+            } else {
+            }
+        }
+    }
+
+    public function validateUserExc()
+    {
+        if(isset($_POST['id'])) {
+            $user = $_POST['user'];
+            $id = $_POST['id'];
+            $response = $this->userModel->validateUserExc($user, $id); 
+            if (count($response) > 0) {
+                echo 1;
+            } else {
+            }
         }
     }
 

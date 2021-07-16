@@ -1,7 +1,7 @@
 <h1>Editar usuario</h1>
 <div class="container">
     <form action="?controller=User&method=update" method="POST">
-        <input type="hidden" name="id" value="<?php echo $users[0]->id; ?>">
+        <input type="hidden" id="id" name="id" value="<?php echo $users[0]->id; ?>">
 
         <div class="form-row">
             <div class="group">
@@ -16,7 +16,8 @@
         <div class="form-row">
             <div class="group">
                 <label for="user">Usuario</label>
-                <input type="text" name="user" id="user" value="<?php echo $users[0]->user; ?>">
+                <input type="text" name="user" id="user" value="<?php echo $users[0]->user; ?>" onblur="validateUser(false)">
+                <span id="userValidateEdit" class="ipvalidate-off">Este nombre de usuario ya existe</span>
             </div>
             <div class="group">
                 <label for="password">Contraseña</label>
